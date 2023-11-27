@@ -344,6 +344,12 @@ export default {
           alt: "Video",
           icon: "play",
         },
+        {
+          type: "video",
+          src: "src/assets/video2.mp4",
+          alt: "Video",
+          icon: "play",
+        },
       ],
     };
   },
@@ -395,7 +401,7 @@ export default {
     showModal1(index) {
       this.isShowModal = true
       this.currentSlideModal = index + 1;
-      this.currentSlide === 4 ?this.isShowModalVideo = false : this.isShowModalVideo = true
+      this.currentSlide > 3 ?this.isShowModalVideo = false : this.isShowModalVideo = true
 
     },
 
@@ -409,7 +415,7 @@ export default {
       this.isShowModalVideo = false;
       document.getElementById('imgh').style.color = 'grey';
       document.getElementById('vidh').style.color = 'black';
-      this.currentSlideModal = 4
+      this.currentSlideModal = 5
     },
     nextSlide() {
 
