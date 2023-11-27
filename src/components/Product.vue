@@ -418,15 +418,17 @@ export default {
       this.currentSlideModal = 5
     },
     nextSlide() {
-
+      this.$isMobile() ? this.currentSlide =
+        this.currentSlide < 3 ? this.currentSlide + 1 : 1  :
       this.currentSlide =
         this.currentSlide < this.totalSlides ? this.currentSlide + 1 : 1;
     },
     prevSlide() {
-
+      this.$isMobile() ? this.currentSlide =
+        this.currentSlide > 1 ? this.currentSlide - 1 : 3 :
       this.currentSlide =
         this.currentSlide > 1 ? this.currentSlide - 1 : this.totalSlides;
-    },
+    },
     goToSlide(index) {
       this.currentSlide = index;
 
